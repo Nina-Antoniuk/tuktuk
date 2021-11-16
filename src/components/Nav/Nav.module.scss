@@ -1,0 +1,43 @@
+.Nav {
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    min-width: 20%;
+    height: 100vh;
+    padding: 3vh 2vw;
+  }
+}
+
+.NavList {
+  padding: 0;
+  list-style-type: none;
+
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.NavLink {
+  display: block;
+  padding: 10px 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  transition: color 250ms ease;
+}
+
+.NavLink:hover {
+  color: #f33958;
+}
+
+.activeLink {
+  color: #f33958;
+}
+
+.activeLink::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f33958;
+}

@@ -11,8 +11,6 @@ function CardContentInfo({ video, hashtags, desc }) {
         <video
           className={s.video}
           src={video}
-          // poster="https://via.placeholder.com/200x150.png?text=video+is+not+available"
-          width="100%"
           controls
           autoPlay
           muted
@@ -21,7 +19,8 @@ function CardContentInfo({ video, hashtags, desc }) {
         ></video>
       ) : (
         <img
-          src="https://via.placeholder.com/200x150.png?text=video+is+not+available"
+          className={s.pleceholder}
+          src="https://via.placeholder.com/250x300.png?text=video+is+not+available"
           alt="placeholder"
         />
       )}

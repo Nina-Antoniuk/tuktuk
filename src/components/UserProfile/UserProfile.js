@@ -8,7 +8,7 @@ function UserProfile({ profileInfo: { user, stats } }) {
         <img
           className={s.userAvatar}
           src={user?.avatarMedium ?? 'https://via.placeholder.com/300x300'}
-          alt={user?.nickname ?? 'placeholder'}
+          alt={user?.nickname ?? 'placeholder for staranger'}
           width="300"
           height="300"
         />
@@ -17,9 +17,6 @@ function UserProfile({ profileInfo: { user, stats } }) {
         <p>
           <span className={s.field}>User name</span>:{' '}
           {user?.nickname ?? 'staranger'}
-        </p>
-        <p>
-          <span className={s.field}>Signature</span>: {user?.signature ?? ''}
         </p>
         <p>
           <span className={s.field}>Followers</span>:{' '}
@@ -32,6 +29,9 @@ function UserProfile({ profileInfo: { user, stats } }) {
         <p>
           <span className={s.field}>Count of posts</span>:{' '}
           {stats?.videoCount ?? 0}
+        </p>
+        <p>
+          <span className={s.field}>Signature</span>: {user?.signature ?? ''}
         </p>
       </div>
     </div>

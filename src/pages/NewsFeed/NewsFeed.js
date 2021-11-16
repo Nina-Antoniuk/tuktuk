@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import Loader from 'react-js-loader';
+import { v4 as uuid } from 'uuid';
 import s from './NewsFeed.module.scss';
 import Post from '../../components/Post';
+import LoaderComponent from '../../components/LoaderComponent';
 import { statuses } from '../../consts';
 import { fetchTrends } from '../../services/fetchNews';
 
-function NewsFeed() {
+function NewsFeed({ getVideo }) {
   const [trends, setTrends] = useState([]);
   const [status, setStatus] = useState(statuses.INIT);
   const [error, setError] = useState('');
@@ -24,21 +25,16 @@ function NewsFeed() {
       });
   }, []);
 
+  useEffect(() => {
+    getVideo(trends[0]);
+  }, [getVideo, trends]);
+
   if (status === statuses.INIT) {
     return <div></div>;
   }
 
   if (status === statuses.PENDING) {
-    return (
-      <div className="Loader">
-        <Loader
-          type="bubble-top"
-          bgColor={'#FFFFFF'}
-          color={'#FFFFFF'}
-          size={100}
-        />
-      </div>
-    );
+    return <LoaderComponent />;
   }
 
   if (status === statuses.REJECT) {
@@ -52,7 +48,7 @@ function NewsFeed() {
           {trends.map(el => {
             return (
               <Post
-                key={el.id}
+                key={uuid()}
                 uniqueId={el.authorMeta.name}
                 auth={el.authorMeta}
                 video={el.videoUrl}

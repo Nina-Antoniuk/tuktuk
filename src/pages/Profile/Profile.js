@@ -8,7 +8,7 @@ import Post from '../../components/Post';
 import { fetchUserById } from '../../services/fetchUserInfo';
 import { feed } from '../../services/feed';
 
-function Propfile() {
+function Propfile({ firstVideo }) {
   const [userInfo, setUserInfo] = useState([]);
   const [userFeed, setUserFeed] = useState([]);
   const [status, setStatus] = useState(statuses.INIT);
@@ -54,6 +54,7 @@ function Propfile() {
     return (
       <section className={s.section}>
         <UserProfile profileInfo={userInfo} />
+
         <ul className={s.postsList}>
           {userFeed.map(el => {
             return (
@@ -62,7 +63,8 @@ function Propfile() {
                 uniqueId={el.author.uniqueId}
                 auth={el.author}
                 authStats={el.authorStats}
-                video={el.video.playAddr}
+                video={firstVideo.videoUrl} //тут підміняється відео
+                // video={el.video.playAddr} // так повинно реалызовуватись
                 hashtags={el.textExtra}
                 desc={el.desc}
                 views={el.stats.playCount}

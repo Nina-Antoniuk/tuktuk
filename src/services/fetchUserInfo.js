@@ -1,7 +1,7 @@
 import { BASE_URL, HOST, API_KEY } from './consts';
 
 export function fetchUserById(id) {
-  return fetch(`https://tiktok33.p.rapidapi.com/user/info/${id}`, {
+  return fetch(`${BASE_URL}/user/info/${id}`, {
     method: 'GET',
     headers: {
       'x-rapidapi-host': HOST,
