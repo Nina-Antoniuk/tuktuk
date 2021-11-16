@@ -1,91 +1,54 @@
-# Getting Started with Create React App
+Зараз існує велика кількість мобільних додатків, які рухаються у бік WEBy.
+Додаток, про який ви ще не чули, але вам потрібно з ним розібратись і створити
+сайт-аналог TikTuk :)
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+Для цього вже підготовлено АРІ, яке ти можеш без проблем використати для
+реалізацїї —
+https://rapidapi.com/premium-apis-premium-apis-default/api/tiktok33/.
 
-## Available Scripts
+Звичайно, це має гарно виглядати, але для інженера код важливіший. Тому ти можеш
+використати готові UI-бібліотеки.
 
-In the project directory, you can run:
+Додаток містить дві сторінки:
 
-### `npm start`
+- стрічка новин (колекція Get Trending Feed);
+- профіль користувача.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Детально про сторінки: ● В Стрічці новин потрібно відобразити останні 30 постів.
+Пост містить в собі: ○ контент: відео та тест; ○ аватарку та імʼя юзера. Клік по
+аватарці чи імені повинен вести на сторінку юзера; ○ хештеги; ○ додаткова
+інформація: кількість коментарів та лайків.
+==============================================================================================
+● Сторінка юзера містить:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- інформацію про юзера (колекція Get User Info);
+- список постів (колекція Get User Feed);
+- над відео показувати к-ть переглядів.
 
-### `npm test`
+# Додаткові завдання:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+- пости мають пагінацію на клієнті;
+- пропрацювати помилки від API (помилка мережі, ...);
+- анімація завантаження відео;
+- адаптив під мобільну версію;
+- автоматичне програвання відео;
+- відео можна поставити на паузу;
+- покриття тестами.
 
-### `npm run build`
+Ваш розв’язок має бути якісним. Постарайтесь викластись на максимум. Але якщо ви
+не встигаєте зробити усі додаткові пункти — надсилайте роботу — ми перевіримо.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best
-performance.
+test task -
+https://drive.google.com/file/d/1JQXGLxNvDDMgNw0yvz-iWKklmsarUSP7/view
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---------------- NewsFeed -----------------
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+1. При переході на / завантажується сторінка NewsFeed
+2. Під час монтування компоненту відправляється запит на Get Trending Feed
+3. Після отримання відповіді від сервера обробляємо її і в залежності від
+   статусу відображаємо:
 
-### `npm run eject`
+- сторінку з постами;
+- сторінку з помилкою.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4.

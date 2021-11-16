@@ -1,0 +1,59 @@
+.userProfile {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 500px;
+    margin-left: 30%;
+    margin-bottom: 50px;
+    padding: 80px 50px 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 800px;
+  }
+}
+
+.thumb {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: rgb(212, 212, 211);
+
+  @media screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+}
+.userAvatar {
+  display: block;
+  width: 100%;
+}
+
+.userInfo {
+  @media screen and (min-width: 1200px) {
+    flex-basis: 50%;
+  }
+}
+
+.description {
+  @media screen and (min-width: 768px) {
+    fles-basis: 100%;
+    margin-top: 30px;
+  }
+}
+
+.field {
+  text-decoration: underline;
+}

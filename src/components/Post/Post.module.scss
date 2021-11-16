@@ -1,0 +1,25 @@
+.ListItem {
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 800px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}
