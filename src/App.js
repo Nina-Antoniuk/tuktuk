@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Routs from './components/Routs';
 
 function App() {
-  const [firstVideo, setFirstVideo] = useState(''); // глобальний стейт потрібен лише для підміни відео
+  const [firstVideo, setFirstVideo] = useState({}); // глобальний стейт потрібен лише для підміни відео
 
   const getFirstVideo = value => {
     setFirstVideo(value);

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
+import { PropTypes } from 'prop-types';
 import s from './NewsFeed.module.scss';
 import Post from '../../components/Post';
 import LoaderComponent from '../../components/LoaderComponent';
@@ -25,6 +26,7 @@ function NewsFeed({ getVideo }) {
       });
   }, []);
 
+  // отримання інформації про перше відео
   useEffect(() => {
     getVideo(trends[0]);
   }, [getVideo, trends]);
@@ -64,5 +66,9 @@ function NewsFeed({ getVideo }) {
     );
   }
 }
+
+NewsFeed.propTypes = {
+  getVideo: PropTypes.func,
+};
 
 export default NewsFeed;

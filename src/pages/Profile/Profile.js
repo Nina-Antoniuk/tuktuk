@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from 'react-js-loader';
+import { PropTypes } from 'prop-types';
 import s from './Profile.module.scss';
 import { statuses } from '../../consts';
 import UserProfile from '../../components/UserProfile';
@@ -77,5 +78,9 @@ function Propfile({ firstVideo }) {
     );
   }
 }
+
+Propfile.propTypes = {
+  firstVideo: PropTypes.object,
+};
 
 export default Propfile;

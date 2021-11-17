@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import LoaderComponent from '../LoaderComponent';
 
 const NewsFeed = lazy(() =>
@@ -28,4 +29,9 @@ function Routs({ getFirstVideo, firstVideo }) {
     </div>
   );
 }
+
+Routs.propTypes = {
+  getFirstVideo: PropTypes.func,
+  firstVideo: PropTypes.object,
+};
 export default Routs;
